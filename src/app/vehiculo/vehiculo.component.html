@@ -1,0 +1,41 @@
+<div class="container">
+
+<h2>Vehiculos</h2>
+    
+<hr />
+	<table class="table">
+	  <thead class="thead-dark">
+	    <tr>
+	      <th >#</th>
+	      <th >Marca</th>
+	      <th >Modelo</th>
+	      <th >Placa</th>
+	      <th >Departamento</th>
+	      <th >municipio</th>
+	      <th >propietario</th>
+	      <th colspan="2">Opciones</th>
+	      
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr *ngFor="let vehiculo of vehiculos ">
+	    	
+	    	<th>{{ vehiculo.id }}</th>
+	    	<th>{{ vehiculo.marca_id }}</th>
+	    	<th>{{ vehiculo.modelo }}</th>
+	    	<th>{{ vehiculo.placa }}</th>
+	    	<th>{{ vehiculo.departamento_id }}</th>
+	    	<th>{{ vehiculo.municipio_id }}</th>
+	    	<th>{{ vehiculo.propietario_id }}</th>
+	    	
+	    	<th><button type="button" class="btn btn-success" (click)="editVehiculo(vehiculo.id)">Editar</button></th>
+	    	<th><button type="button" class="btn btn-danger" (click)="deleteVehiculo(vehiculo.id)">Eliminar</button></th>
+	    	
+	    	
+	    	
+	    </tr>
+	    
+	  </tbody>
+	</table>
+</div>
+
